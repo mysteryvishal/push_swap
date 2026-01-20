@@ -1,2 +1,13 @@
+*This project has been created as part of the 42 curriculum by vmistry.*
+
 # push_swap
-An algorithmic project tackling integer sorting using two stacks and a restricted instruction set. Written in C, the challenge lies in minimising the number of operations rather than just sorting correctly. It focuses on algorithm design, optimisation, and understanding time–operation trade-offs under strict constraints.
+
+push_swap is a 42 School algorithmic project focused on sorting integers using two stacks and a strictly limited set of operations. The goal is not just correctness, but optimisation – producing the smallest possible sequence of instructions. This project explores data structures, algorithmic complexity, and practical trade-offs between different sorting strategies, all implemented in C under tight constraints.
+
+## Description
+
+## Instructions
+
+## Resources
+
+### AI Usage
