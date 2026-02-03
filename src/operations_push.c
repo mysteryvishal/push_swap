@@ -6,13 +6,18 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:29:56 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/03 11:19:58 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/03 12:28:35 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// Remove top node from stack b, add to top of stack a
+// Push (pa, pb)
+// Remove top node from one stack, add to top of other
+// A: [3] -> [1]    		B: [5] -> [2]
+// After pa:
+// A: [5] -> [3] -> [1]    	B: [2]
+
 void	pa(t_list **a, t_list **b)
 {
 	t_list	*next_b;
@@ -24,7 +29,7 @@ void	pa(t_list **a, t_list **b)
 	(*b) = next_b;
 	write(1, "pa\n", 3);
 }
-// Remove top node from stack a, add to top of stack b
+
 void	pb(t_list **a, t_list **b)
 {
 	t_list	*next_a;

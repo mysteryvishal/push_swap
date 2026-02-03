@@ -6,11 +6,16 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:30:04 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/03 12:03:58 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/03 12:27:44 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+// Rotate (ra, rb, rr)
+// Move top node to bottom
+// Before: [3] -> [1] -> [5] -> NULL
+// After:  [1] -> [5] -> [3] -> NULL
 
 static void	rotate(t_list **lst)
 {
