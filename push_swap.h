@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:38:51 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/03 10:56:34 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/03 11:20:50 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	error_exit(void);
 void	sa(t_list **a);
 void	sb(t_list **b);
 void	ss(t_list **a, t_list **b);
+void	pa(t_list **a, t_list **b);
+void	pb(t_list **a, t_list **b);
 
 // sorting
 void	push_swap(int *stack);
