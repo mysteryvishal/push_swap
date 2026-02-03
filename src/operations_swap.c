@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:30:06 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/03 12:30:01 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/03 12:40:52 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,16 @@
 
 static void	swap(t_list **lst)
 {
-	int	tmp;
+	t_list	*n1;
+	t_list	*n2;
 
 	if (!(*lst) || !(*lst)->next)
 		return ;
-	tmp = (*lst)->content;
-	(*lst)->content = (*lst)->next->content;
-	(*lst)->next->content = tmp;
+	n1 = *lst;
+	n2 = n1->next;
+	n1->next = n2->next;
+	n2->next = n1;
+	*lst = n2;
 }
 
 void	sa(t_list **a)
