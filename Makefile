@@ -6,13 +6,13 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/20 22:40:57 by vmistry           #+#    #+#              #
-#    Updated: 2026/02/04 16:29:48 by vmistry          ###   ########.fr        #
+#    Updated: 2026/02/04 19:17:21 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = cc
-CFLAGS := -Wall -Werror -Wextra
+CFLAGS := -Wall -Werror -Wextra -I. -Ilibft
 RM := rm -f
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
