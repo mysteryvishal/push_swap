@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:38:51 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/04 19:15:50 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/05 08:20:43 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@
 # include <unistd.h>
 # include "libft/libft.h"
 
-// parsing
+// utils
 void	error_exit(void);
+
+// parsing
+t_list	*parse_args(int argc, char **argv);
 
 // operations
 void	sa(t_list **a);
@@ -34,6 +37,6 @@ void	rrb(t_list **b);
 void	rrr(t_list **a, t_list **b);
 
 // sorting
-t_list	*parse_args(int argc, char **argv);
+int	sort(t_list a, t_list b);
 
 #endif
