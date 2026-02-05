@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 07:26:49 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/05 07:53:28 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/05 09:27:08 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ int	main(int argc, char *argv[])
 	b = NULL;
 	if (!a)
 		error_exit();
-	// TODO: sorting logic here
-	
+	sort(a, b);
 	ft_lstclear(&a, ft_lstdelone);
 	ft_lstclear(&b, ft_lstdelone);
 	return (0);
