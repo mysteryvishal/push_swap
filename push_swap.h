@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:38:51 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/05 08:20:43 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/05 09:26:27 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 // utils
 void	error_exit(void);
+void	print_stack(t_list **stack);
 
 // parsing
 t_list	*parse_args(int argc, char **argv);
