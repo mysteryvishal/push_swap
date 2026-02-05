@@ -39,5 +39,5 @@ void	rrr(t_list **a, t_list **b);
 
 // sorting
 int	sort(t_list **a, t_list **b);
-
+int	sort_small(t_list **a, t_list **b, int n);
 #endif
