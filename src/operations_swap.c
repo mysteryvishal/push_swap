@@ -6,14 +6,14 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:30:06 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/03 12:40:52 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/05 09:58:39 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // Swap (sa, sb, ss)
-// Swap the first 2 nodes (this implementation swaps their content/value)
+// Swap the first 2 nodes (this implementation swaps their pointers)
 // Before: [3] -> [1] -> [5]
 // After:  [1] -> [3] -> [5]
 
