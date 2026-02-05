@@ -6,13 +6,31 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:27:14 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/05 07:41:10 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/05 07:46:00 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-// TODO free memory from ft_split
+void	free_split(char **numbers)
+{
+	size_t	i;
+	size_t	n;
+
+	if (!numbers)
+		return ;
+	n = 0;
+	while (numbers[n])
+		n++;
+	i = 0;
+	while (i < n)
+	{
+		free(numbers[i]);
+		i++;
+	}
+	free(numbers);
+}
+
 static t_list	*build_stack(char **numbers, int split)
 {
 	t_list	*stack;
@@ -20,7 +38,6 @@ static t_list	*build_stack(char **numbers, int split)
 	t_list	*node;
 	int	*val;
 
-	(void)split;
 	i = 0;
 	stack = NULL;
 	while (numbers[i])
@@ -35,6 +52,8 @@ static t_list	*build_stack(char **numbers, int split)
 		ft_lstadd_back(&stack, node);
 		i++;
 	}
+	if (split)
+		free_split(numbers);
 	return (stack);
 }
 
