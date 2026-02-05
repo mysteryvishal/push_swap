@@ -6,13 +6,13 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:27:14 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/05 07:46:00 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/05 07:51:37 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	free_split(char **numbers)
+static void	free_split(char **numbers)
 {
 	size_t	i;
 	size_t	n;
