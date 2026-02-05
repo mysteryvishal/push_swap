@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:27:14 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/05 06:56:55 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/05 07:41:10 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,22 @@ static t_list	*build_stack(char **numbers, int split)
 {
 	t_list	*stack;
 	size_t	i;
-	int	val;
+	t_list	*node;
+	int	*val;
 
 	(void)split;
 	i = 0;
 	stack = NULL;
-	while(numbers[i])
+	while (numbers[i])
 	{
-		val = ft_atoi(numbers[i]);
-		ft_lstadd_back(&stack, ft_lstnew(&val));
+		val = malloc(sizeof(int));
+		if (!val)
+			return (NULL);
+		*val = ft_atoi(numbers[i]);
+		node = ft_lstnew(val);
+		if (!node)
+			return (ft_lstclear(&stack, free), NULL);
+		ft_lstadd_back(&stack, node);
 		i++;
 	}
 	return (stack);
