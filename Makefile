@@ -6,7 +6,7 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/20 22:40:57 by vmistry           #+#    #+#              #
-#    Updated: 2026/02/04 19:17:21 by vmistry          ###   ########.fr        #
+#    Updated: 2026/02/05 07:07:15 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ $(NAME): $(OBJS) $(LIBFT)
 
 $(LIBFT): $(LIBFT_DIR)
 	make all -C $<
+	make bonus -C $<
 
 clean:
 	make clean -C $(LIBFT_DIR)
