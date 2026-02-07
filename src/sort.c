@@ -24,5 +24,6 @@ int	sort(t_list **a, t_list **b)
 	if (n <= 5)
 		return (sort_small(a, b, n));
 	else
-		return (sort_large(a, b, n));
+		return (1);
+		// return (sort_large(a, b, n));
 }

@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:20:53 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/05 10:48:18 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/07 19:03:19 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,12 @@ static int	sort_3(t_list **a)
 	return (0);
 }
 
-// TODO add sort for <= 5
+// TODO check error handling once sort_3 and sort_5 are fixed
 int	sort_small(t_list **a, t_list **b, int n)
 {
 	if (n <= 3)
 		return (sort_3(a));
 	else
-		return (1);
-	return (0);
+		return (sort_5(a, b));
+	error_exit(a, b);
 }

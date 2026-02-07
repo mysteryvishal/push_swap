@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:38:51 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/05 09:26:27 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/07 18:55:20 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 # include "libft/libft.h"
 
 // utils
-void	error_exit(void);
+void	error_exit(t_list **a, t_list **b);
 void	print_stack(t_list **stack);
+void	clear_stacks(t_list **a, t_list **b);
 
 // parsing
 t_list	*parse_args(int argc, char **argv);
@@ -40,4 +41,6 @@ void	rrr(t_list **a, t_list **b);
 // sorting
 int	sort(t_list **a, t_list **b);
 int	sort_small(t_list **a, t_list **b, int n);
+int	sort_3(t_list **a);
+int	sort_5(t_list **a, t_list **b);
 #endif
