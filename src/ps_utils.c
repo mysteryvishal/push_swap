@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 10:36:22 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/05 10:51:38 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/06 17:44:37 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ void	print_stack(t_list **stack)
 	t_list *current;
 	
 	current = *stack;
-	ft_putstr_fd("Stack: ", 1);
+	ft_printf("Stack: ");
 	while (current)
 	{
-		ft_putnbr_fd(*(int *)current->content, 1);
+		ft_printf("%d", *(int *)current->content);
 		if (current->next)
-			ft_putstr_fd(" -> ", 1);
+			ft_printf(" -> ");
 		current = current->next;
 	}
-	ft_putstr_fd("\n", 1);
+	ft_printf("\n");
 }
