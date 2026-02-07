@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:03:57 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/05 09:03:31 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/07 18:31:58 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	sort(t_list **a, t_list **b)
 {
 	int	n;
 
-	n = ft_lstsize(&a);
+	n = ft_lstsize(*a);
 	if (n <= 5)
 		return (sort_small(a, b, n));
 	else
