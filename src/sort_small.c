@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:20:53 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/08 00:59:49 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/08 01:09:10 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ int	sort_5(t_list **a, t_list **b)
 // TODO check error handling once sort_3 and sort_5 are fixed
 int	sort_small(t_list **a, t_list **b, int n)
 {
+	ft_printf("\n--\tfunction: sort_small\t\t--\n");
 	if (n <= 3)
 		return (sort_3(a));
 	else
