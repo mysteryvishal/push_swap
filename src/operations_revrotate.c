@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:32:11 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/03 12:26:37 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/15 06:35:33 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,23 @@
 
 static void	rev_rotate(t_list **lst)
 {
-	t_list	*node;
-	t_list	*penultimate;
+	t_list	*last;
+	t_list	*prev;
 
-	if (!(*lst) || !(*lst)->next)
+	ft_printf("rr: %p\n", *lst);
+	if (!lst || !(*lst) || !(*lst)->next)
 		return ;
-	penultimate = *lst;
-	while (penultimate->next->next)
-		penultimate = penultimate->next;
-	node = penultimate->next;
-	penultimate->next = NULL;
-	ft_lstadd_front(lst, node);
+	prev = NULL;
+	last = *lst;
+	while (last->next)
+	{
+		prev = last;
+		last = last->next;
+	}
+	if (prev)
+		prev->next = NULL;
+	last->next = *lst;
+	*lst = last;
 }
 
 void	rra(t_list **a)

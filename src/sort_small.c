@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:20:53 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/08 01:09:10 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/15 06:30:25 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int	sort_5(t_list **a, t_list **b)
 		if (idx_min == 0)
 			pb(a, b);
 		if (idx_min > 3)
-			rra(b);
+			rra(a);
 		else
 			ra(a);
 		idx_min = get_min_index(a);
