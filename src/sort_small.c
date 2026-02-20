@@ -6,13 +6,13 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:20:53 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/15 06:30:25 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/20 18:38:14 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-// TODO figure out protections for sort_3
+// TODO write protection for sort_3 (if any)
 int	sort_3(t_list **a)
 {
 	int	*one;
@@ -39,32 +39,8 @@ int	sort_3(t_list **a)
 	}
 	return (0);
 }
-// TODO move to sort_utils function
-int	get_min_index(t_list **a)
-{
-	int	idx;
-	int	idx_min;
-	int	*min;
-	t_list	*current;
 
-	idx = 0;
-	idx_min = 0;
-	current = *a;
-	min = (int *) current->content;
-	while (current)
-	{
-		if ((*(int *)current->content) < *min)
-		{
-			min = current->content;
-			idx_min = idx;
-		}
-		idx++;
-		current = current->next;
-	}
-	return (idx_min);
-}
-
-// TODO add protections to sort_5
+// TODO write protection for sort_5 (if any)
 int	sort_5(t_list **a, t_list **b)
 {	
 	int	idx_min;
@@ -93,7 +69,7 @@ int	sort_5(t_list **a, t_list **b)
 	return(0);
 }
 
-// TODO check error handling once sort_3 and sort_5 are fixed
+// TODO write protections
 int	sort_small(t_list **a, t_list **b, int n)
 {
 	ft_printf("\n--\tfunction: sort_small\t\t--\n");

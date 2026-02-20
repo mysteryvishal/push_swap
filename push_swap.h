@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:38:51 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/08 00:32:47 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/20 18:34:10 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,13 @@
 # include "libft/libft.h"
 
 
-// utils
+// general utils
 void	error_exit(t_list **a, t_list **b);
 void	print_stack(t_list **stack);
 void	clear_stacks(t_list **a, t_list **b);
+
+// sort utils
+int	get_min_index(t_list **a);
 
 // parsing
 t_list	*parse_args(int argc, char **argv);
