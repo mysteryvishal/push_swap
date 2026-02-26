@@ -13,28 +13,28 @@
 #include "../push_swap.h"
 
 // TODO write protection for sort_3 (if any)
-int	sort_3(t_list **a)
+int	sort_3(t_list **lst)
 {
 	int	*one;
 	int	*two;
 	int	*three;
 
-	one = (*a)->content;
-	two = ((*a)->next)->content;
-	three = ft_lstlast(*a)->content;
+	one = (*lst)->content;
+	two = ((*lst)->next)->content;
+	three = ft_lstlast(*lst)->content;
 	while (!((*one < *two) && (*two < *three)))
 	{
-		one = (*a)->content;
-		two = ((*a)->next)->content;
-		three = ft_lstlast(*a)->content;
+		one = (*lst)->content;
+		two = ((*lst)->next)->content;
+		three = ft_lstlast(*lst)->content;
 		if (*one > *three)
-			ra(a);
+			ra(lst);
 		else if (*one > *two)
-			sa(a);
+			sa(lst);
 		else if (*two > *three)
 		{
-			sa(a);
-			ra(a);
+			sa(lst);
+			ra(lst);
 		}
 	}
 	return (0);
@@ -42,9 +42,9 @@ int	sort_3(t_list **a)
 
 // TODO write protection for sort_5 (if any)
 int	sort_5(t_list **a, t_list **b)
-{	
+{
 	int	idx_min;
-	
+
 	ft_printf("\n--\tfunction: sort_5\t\t--\n");
 	idx_min = get_min_index(a);
 	while (ft_lstsize(*a) != 3)
