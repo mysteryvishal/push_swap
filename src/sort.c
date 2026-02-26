@@ -16,16 +16,18 @@
 // – n <= 5 ––> Quicksort
 // – n > 5  ––> Radix sort
 
+// TODO: if n isn't used for any calculation besides determining which sorting algorithm to use, then don't bother counting it all. Just see if it's <= 5 or not.
+
 int	sort(t_list **a, t_list **b)
 {
 	int	n;
 
 	n = ft_lstsize(*a);
-	ft_printf("\n--\tfunction: sort\t\t--\n");
-	ft_printf  ("\tn = %d\t\t\t\n", n);
+	ft_printf("\n--\tfunction: sort\t\t--\n\tn = %d\t\t\t\n", n);
+	if (is_sorted(*a))
+		return (0);
 	if (n <= 5)
 		return (sort_small(a, b, n));
 	else
-		return (1);
-		// return (sort_large(a, b, n));
+		return (sort_large(a, b, n));
 }

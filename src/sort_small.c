@@ -22,6 +22,8 @@ int	sort_3(t_list **lst)
 	one = (*lst)->content;
 	two = ((*lst)->next)->content;
 	three = ft_lstlast(*lst)->content;
+	if (!(*one) || !(*two) || !(*three))
+		return (1);
 	while (!((*one < *two) && (*two < *three)))
 	{
 		one = (*lst)->content;
