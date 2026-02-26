@@ -35,3 +35,17 @@ int	get_min_index(t_list **a)
 	}
 	return (idx_min);
 }
+
+int	is_sorted(t_list **lst)
+{
+	t_list	*current;
+
+	current = *lst;
+	while (current && current->next)
+	{
+		if (*current->content > *(int *)current->next->content)
+			return (0);
+		current = current->next;
+	}
+	return (1);
+}
