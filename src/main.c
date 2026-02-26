@@ -12,22 +12,7 @@
 
 #include "push_swap.h"
 
-// TODO sort of success/failure signals between functions
-// TODO move clear_stacks to utils
-void	clear_stacks(t_list **a, t_list **b)
-{
-	ft_printf("\n--\tfunction: clear\t\t--\n");
-	if (*a)
-	{
-		ft_lstclear(a, free);
-		ft_printf("cleared: a\n");
-	}
-	if (*b)
-	{
-		ft_lstclear(b, free);
-		ft_printf("cleared: b\n");
-	}
-}
+// TODO sort out success/failure signals between functions
 
 int	main(int argc, char *argv[])
 {

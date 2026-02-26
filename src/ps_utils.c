@@ -21,10 +21,25 @@ void	error_exit(t_list **a, t_list **b)
 	exit(1);
 }
 
+void	clear_stacks(t_list **a, t_list **b)
+{
+	ft_printf("\n--\tfunction: clear\t\t--\n");
+	if (*a)
+	{
+		ft_lstclear(a, free);
+		ft_printf("cleared: a\n");
+	}
+	if (*b)
+	{
+		ft_lstclear(b, free);
+		ft_printf("cleared: b\n");
+	}
+}
+
 void	print_stack(t_list **stack)
 {
 	t_list *current;
-	
+
 	current = *stack;
 	ft_printf("Stack: ");
 	while (current)
