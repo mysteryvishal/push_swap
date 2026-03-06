@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 // dispatch function based on size `n` of stack
 // – n <= 5 ––> Quicksort

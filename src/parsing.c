@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 // FIXME(parse): Non-numeric argv values are not rejected.
 // Examples that currently pass but should error:

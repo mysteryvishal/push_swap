@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 // TODO write protection for sort_3 (if any)
 int	sort_3(t_list **lst)

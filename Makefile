@@ -12,10 +12,11 @@
 
 NAME = push_swap
 CC = cc
-CFLAGS := -Wall -Werror -Wextra -I. -Ilibft
+CFLAGS := -Wall -Werror -Wextra -Iinclude -Ilibft
 RM := rm -f
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
+# FIXME - This is a temporary solution to include all .c files in the src directory.
 SRCS := $(wildcard ./src/*.c)
 OBJS = $(SRCS:.c=.o)
 
