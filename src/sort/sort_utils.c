@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 18:33:27 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 10:12:59 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/03/06 11:38:49 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,16 @@ int	get_target_pos(t_list *stack, int value)
 	return (0);
 }
 
-// rotate_to_position
+void	rotate_to_position(t_list **stack, int pos)
+{
+	int	size;
+
+	size = ft_lstsize(*stack);
+	if (pos <= size / 2)
+		while (pos--)
+			ra(stack);
+	else
+		while (pos++ < size)
+			rra(stack);
+	
+}
