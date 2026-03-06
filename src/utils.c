@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_utils.c                                         :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 10:36:22 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/08 00:52:17 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/03/06 10:13:09 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,20 @@ void	print_stack(t_list **stack)
 		current = current->next;
 	}
 	ft_printf("\n");
+}
+
+int	is_sorted(t_list **stack)
+{
+	t_list	*current;
+
+	if (!stack)
+		return (-1);
+	current = *stack;
+	while (current && current->next)
+	{
+		if (*(int *)current->content > *(int *)current->next->content)
+			return (0);
+		current = current->next;
+	}
+	return (1);
 }
