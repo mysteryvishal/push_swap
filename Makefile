@@ -6,7 +6,7 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/20 22:40:57 by vmistry           #+#    #+#              #
-#    Updated: 2026/02/05 07:07:15 by vmistry          ###   ########.fr        #
+#    Updated: 2026/03/06 08:45:36 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,19 @@ CFLAGS := -Wall -Werror -Wextra -Iinclude -Ilibft
 RM := rm -f
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
-# FIXME - This is a temporary solution to include all .c files in the src directory.
-SRCS := $(wildcard ./src/*.c)
+
+SRCS = src/main.c \
+       src/parsing.c \
+       src/operations/push.c \
+       src/operations/rotate.c \
+       src/operations/rev_rotate.c \
+       src/operations/swap.c \
+       src/sort/sort.c \
+       src/sort/sort_small.c \
+       src/sort/sort_large.c \
+       src/sort/sort_utils.c \
+       src/utils.c
+
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
