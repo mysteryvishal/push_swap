@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:38:51 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 09:37:50 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/03/06 10:08:26 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,15 @@ void	error_exit(t_list **a, t_list **b);
 void	print_stack(t_list **stack);
 void	clear_stacks(t_list **a, t_list **b);
 
+// parsing
+t_list	*parse_args(int argc, char **argv);
+
 // sort utils
 int		is_sorted(t_list **stack);
 int		find_position(t_list *stack, int value);
 int		find_min(t_list *stack);
 int		find_max(t_list *stack);
-
-// parsing
-t_list	*parse_args(int argc, char **argv);
+int		get_target_pos(t_list *stack, int value);
 
 // operations
 void	sa(t_list **a);

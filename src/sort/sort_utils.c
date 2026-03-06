@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 18:33:27 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 09:38:17 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/03/06 10:07:27 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	find_max(t_list *stack)
 int	find_position(t_list *stack, int value)
 {
 	t_list	*current;
-	int	idx;
+	int		idx;
 
 	current = stack;
 	idx = 0;
@@ -79,4 +79,19 @@ int	find_position(t_list *stack, int value)
 		current = current->next;
 	}
 	return (-1);
+}
+
+int	get_target_pos(t_list *stack, int value)
+{
+	int	pos;
+
+	pos = 0;
+	while (stack)
+	{
+		if (*(int *)stack->content >= value)
+			return (pos);
+		stack = stack->next;
+		pos++;
+	}
+	return (0);
 }
