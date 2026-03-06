@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:20:53 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 08:44:28 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/03/06 09:00:50 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,15 +69,4 @@ int	sort_5(t_list **a, t_list **b)
 	print_stack(a);
 	print_stack(b);
 	return (0);
-}
-
-// TODO write protections
-int	sort_small(t_list **a, t_list **b, int n)
-{
-	ft_printf("\n--\tfunction: sort_small\t\t--\n");
-	if (n <= 3)
-		return (sort_3(a));
-	else
-		return (sort_5(a, b));
-	error_exit(a, b);
 }

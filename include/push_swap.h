@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:38:51 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 08:46:01 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/03/06 09:00:57 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	rrr(t_list **a, t_list **b);
 
 // sorting
 int		sort(t_list **a, t_list **b);
-int		sort_small(t_list **a, t_list **b, int n);
 int		sort_3(t_list **a);
 int		sort_5(t_list **a, t_list **b);
 int		sort_large(t_list **a, t_list **b, int n);
