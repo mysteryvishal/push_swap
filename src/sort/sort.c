@@ -26,7 +26,7 @@ int	sort(t_list **a, t_list **b)
 
 	n = ft_lstsize(*a);
 	ft_printf("\n--\tfunction: sort\t\t--\n\tn = %d\t\t\t\n", n);
-	if (is_sorted(*a))
+	if (is_sorted(a))
 		return (0);
 	if (n <= 5)
 		return (sort_small(a, b, n));

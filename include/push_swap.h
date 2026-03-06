@@ -24,7 +24,7 @@ void	clear_stacks(t_list **a, t_list **b);
 
 // sort utils
 int		get_min_index(t_list **a);
-int		is_sorted(t_list **lst);
+int		is_sorted(t_list **stack);
 
 // parsing
 t_list	*parse_args(int argc, char **argv);
