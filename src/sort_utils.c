@@ -6,11 +6,11 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 18:33:27 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/20 18:33:35 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/03/06 07:48:51 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	get_min_index(t_list **a)
 {
@@ -43,7 +43,7 @@ int	is_sorted(t_list **lst)
 	current = *lst;
 	while (current && current->next)
 	{
-		if (*current->content > *(int *)current->next->content)
+		if (*(int *)current->content > *(int *)current->next->content)
 			return (0);
 		current = current->next;
 	}
