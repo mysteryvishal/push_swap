@@ -6,19 +6,20 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:20:53 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 09:00:50 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/03/06 09:34:09 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// TODO write protection for sort_3 (if any)
+// TODO verify protections for sort_3
 int	sort_3(t_list **lst)
 {
 	int	*one;
 	int	*two;
 	int	*three;
 
+	ft_printf("\n--\tfunction: sort_3\t\t--\n");
 	one = (*lst)->content;
 	two = ((*lst)->next)->content;
 	three = ft_lstlast(*lst)->content;
@@ -42,31 +43,28 @@ int	sort_3(t_list **lst)
 	return (0);
 }
 
-// TODO write protection for sort_5 (if any)
+// TODO verify protection for sort_5
 int	sort_5(t_list **a, t_list **b)
 {
-	int	idx_min;
+	int	min_val;
+	int	min_idx;
 
 	ft_printf("\n--\tfunction: sort_5\t\t--\n");
-	idx_min = get_min_index(a);
-	while (ft_lstsize(*a) != 3)
+	while (ft_lstsize(*a) > 3)
 	{
-		if (idx_min == 0)
-			pb(a, b);
-		if (idx_min > 3)
-			rra(a);
+		min_val = find_min(*a);
+		min_idx = find_position(*a, min_val);
+
+		if (min_idx <= ft_lstsize(*a))
+			while (find_position(*a, min_val) != 0)
+				ra(a);
 		else
-			ra(a);
-		idx_min = get_min_index(a);
-		ft_printf("idx_min = %d\n", idx_min);
-		print_stack(a);
-		print_stack(b);
+			while (find_position(*a, min_val != 0))
+				rra(a);
+		pb(a, b);
 	}
 	sort_3(a);
 	while (*b)
 		pa(a, b);
-	ft_printf("sorted:\n");
-	print_stack(a);
-	print_stack(b);
 	return (0);
 }

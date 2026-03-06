@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:38:51 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 09:00:57 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/03/06 09:37:50 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ void	print_stack(t_list **stack);
 void	clear_stacks(t_list **a, t_list **b);
 
 // sort utils
-int		get_min_index(t_list **a);
 int		is_sorted(t_list **stack);
+int		find_position(t_list *stack, int value);
+int		find_min(t_list *stack);
+int		find_max(t_list *stack);
 
 // parsing
 t_list	*parse_args(int argc, char **argv);
@@ -46,5 +48,5 @@ void	rrr(t_list **a, t_list **b);
 int		sort(t_list **a, t_list **b);
 int		sort_3(t_list **a);
 int		sort_5(t_list **a, t_list **b);
-int		sort_large(t_list **a, t_list **b, int n);
+int		sort_large(t_list **a, t_list **b);
 #endif

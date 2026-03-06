@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:03:57 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 09:02:25 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/03/06 09:08:20 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ int	sort(t_list **a, t_list **b)
 	else if (n <= 5)
 		return (sort_5(a, b));
 	else
-		return (sort_large(a, b, n));
+		return (sort_large(a, b));
 }
