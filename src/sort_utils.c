@@ -36,11 +36,13 @@ int	get_min_index(t_list **a)
 	return (idx_min);
 }
 
-int	is_sorted(t_list **lst)
+int	is_sorted(t_list **stack)
 {
 	t_list	*current;
 
-	current = *lst;
+	if (!stack)
+		return (-1);
+	current = *stack;
 	while (current && current->next)
 	{
 		if (*(int *)current->content > *(int *)current->next->content)
