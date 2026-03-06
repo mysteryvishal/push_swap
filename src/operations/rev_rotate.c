@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:32:11 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 08:43:32 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/03/06 11:08:32 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ static void	rev_rotate(t_list **lst)
 	t_list	*last;
 	t_list	*prev;
 
-	ft_printf("rr: %p\n", *lst);
 	if (!lst || !(*lst) || !(*lst)->next)
 		return ;
 	prev = NULL;
