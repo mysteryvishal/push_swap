@@ -17,15 +17,14 @@
 # include <unistd.h>
 # include "libft/libft.h"
 
-
 // general utils
 void	error_exit(t_list **a, t_list **b);
 void	print_stack(t_list **stack);
 void	clear_stacks(t_list **a, t_list **b);
 
 // sort utils
-int	get_min_index(t_list **a);
-int	is_sorted(t_list **lst);
+int		get_min_index(t_list **a);
+int		is_sorted(t_list **lst);
 
 // parsing
 t_list	*parse_args(int argc, char **argv);
@@ -44,9 +43,9 @@ void	rrb(t_list **b);
 void	rrr(t_list **a, t_list **b);
 
 // sorting
-int	sort(t_list **a, t_list **b);
-int	sort_small(t_list **a, t_list **b, int n);
-int	sort_3(t_list **a);
-int	sort_5(t_list **a, t_list **b);
-int	sort_large(t_list **a, t_list **b, int n);
+int		sort(t_list **a, t_list **b);
+int		sort_small(t_list **a, t_list **b, int n);
+int		sort_3(t_list **a);
+int		sort_5(t_list **a, t_list **b);
+int		sort_large(t_list **a, t_list **b, int n);
 #endif

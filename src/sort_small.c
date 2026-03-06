@@ -63,12 +63,12 @@ int	sort_5(t_list **a, t_list **b)
 		print_stack(b);
 	}
 	sort_3(a);
-	while(*b)
+	while (*b)
 		pa(a, b);
 	ft_printf("sorted:\n");
 	print_stack(a);
 	print_stack(b);
-	return(0);
+	return (0);
 }
 
 // TODO write protections

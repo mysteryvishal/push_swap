@@ -6,11 +6,17 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:27:14 by vmistry           #+#    #+#             */
-/*   Updated: 2026/02/08 00:52:04 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/02/20 18:39:13 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+// FIXME(parse): Non-numeric argv values are not rejected.
+// Examples that currently pass but should error:
+//   ./pushswap 11 10 6f 6
+//   ./pushswap aa11 10 6f 6
+// Expected: exit with error on invalid integer tokens.
 
 static void	free_split(char **numbers)
 {
@@ -37,7 +43,7 @@ static t_list	*build_stack(char **numbers, int split)
 	t_list	*stack;
 	size_t	i;
 	t_list	*node;
-	int	*val;
+	int		*val;
 
 	ft_printf("\n--\tfunction: build\t\t--\n");
 	i = 0;

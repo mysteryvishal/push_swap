@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 // Swap (sa, sb, ss)
-// Swap the first 2 nodes (this implementation swaps their pointers)
+// Swap the first 2 nodes (by swapping pointers)
 // Before: [3] -> [1] -> [5]
 // After:  [1] -> [3] -> [5]
 

@@ -16,7 +16,9 @@
 // – n <= 5 ––> Quicksort
 // – n > 5  ––> Radix sort
 
-// TODO: if n isn't used for any calculation besides determining which sorting algorithm to use, then don't bother counting it all. Just see if it's <= 5 or not.
+// TODO: if n isn't used for any calculations besides determining
+// which sorting algorithm to use, then don't bother counting it all.
+// Just aim to see if it's <= 5 or not.
 
 int	sort(t_list **a, t_list **b)
 {

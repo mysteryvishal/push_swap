@@ -38,7 +38,7 @@ void	clear_stacks(t_list **a, t_list **b)
 
 void	print_stack(t_list **stack)
 {
-	t_list *current;
+	t_list	*current;
 
 	current = *stack;
 	ft_printf("Stack: ");

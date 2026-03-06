@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 // TODO sort out success/failure signals between functions
 
 int	main(int argc, char *argv[])
 {
-	ft_printf("\n--\tfunction: main\t\t--\n");
 	t_list	*a;
-    	t_list	*b;
+	t_list	*b;
 
+	ft_printf("\n--\tfunction: main\t\t--\n");
 	if (argc < 2)
 		return (1);
 	a = parse_args(argc, argv);

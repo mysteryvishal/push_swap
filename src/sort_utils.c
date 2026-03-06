@@ -14,9 +14,9 @@
 
 int	get_min_index(t_list **a)
 {
-	int	idx;
-	int	idx_min;
-	int	*min;
+	int		idx;
+	int		idx_min;
+	int		*min;
 	t_list	*current;
 
 	idx = 0;
@@ -54,7 +54,7 @@ int	is_sorted(t_list **stack)
 
 int	find_min(t_list *stack)
 {
-	int	min;
+	int		min;
 	t_list	*current;
 
 	if (!stack)
@@ -72,7 +72,7 @@ int	find_min(t_list *stack)
 
 int	find_max(t_list *stack)
 {
-	int	max;
+	int		max;
 	t_list	*current;
 
 	if (!stack)
