@@ -51,3 +51,39 @@ int	is_sorted(t_list **stack)
 	}
 	return (1);
 }
+
+int	find_min(t_list *stack)
+{
+	int	min;
+	t_list	*current;
+
+	if (!stack)
+		return (0);
+	current = stack;
+	min = *(int *)current->content;
+	while (current && current->next)
+	{
+		if (*(int *)current->content < min)
+			min = *(int *)current->content;
+		current = current->next;
+	}
+	return (min);
+}
+
+int	find_max(t_list *stack)
+{
+	int	max;
+	t_list	*current;
+
+	if (!stack)
+		return (0);
+	current = stack;
+	max = *(int *)current->content;
+	while (current && current->next)
+	{
+		if (*(int *)current->content > max)
+			max = *(int *)current->content;
+		current = current->next;
+	}
+	return (max);
+}
