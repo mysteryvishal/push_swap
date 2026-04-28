@@ -59,7 +59,7 @@ int	sort_5(t_list **a, t_list **b)
 			while (find_position(*a, min_val) != 0)
 				ra(a);
 		else
-			while (find_position(*a, min_val != 0))
+			while (find_position(*a, min_val) != 0)
 				rra(a);
 		pb(a, b);
 	}
