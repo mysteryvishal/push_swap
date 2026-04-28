@@ -21,7 +21,7 @@ int	find_min(t_list *stack)
 		return (0);
 	current = stack;
 	min = *(int *)current->content;
-	while (current && current->next)
+	while (current)
 	{
 		if (*(int *)current->content < min)
 			min = *(int *)current->content;
@@ -39,7 +39,7 @@ int	find_max(t_list *stack)
 		return (0);
 	current = stack;
 	max = *(int *)current->content;
-	while (current && current->next)
+	while (current)
 	{
 		if (*(int *)current->content > max)
 			max = *(int *)current->content;
@@ -55,7 +55,7 @@ int	find_position(t_list *stack, int value)
 
 	current = stack;
 	idx = 0;
-	while (current && current->next)
+	while (current)
 	{
 		if (*(int *)current->content == value)
 			return (idx);
