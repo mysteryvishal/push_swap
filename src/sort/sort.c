@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:03:57 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 09:08:20 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/04/30 11:06:31 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	sort(t_list **a, t_list **b)
 	if (is_sorted(a))
 		return (0);
 	n = ft_lstsize(*a);
-	ft_printf("\n--\tfunction: sort\t\t--\n\tn = %d\t\t\t\n", n);
 	if (n == 2)
 	{
 		sa(a);

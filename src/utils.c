@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 10:36:22 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 10:13:09 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/04/30 11:15:08 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	error_exit(t_list **a, t_list **b)
 {
-	ft_printf("\n--\tfunction: error\t\t--\n");
 	if (*a || *b)
 		clear_stacks(a, b);
 	write(2, "Error\n", 6);
@@ -23,17 +22,10 @@ void	error_exit(t_list **a, t_list **b)
 
 void	clear_stacks(t_list **a, t_list **b)
 {
-	ft_printf("\n--\tfunction: clear\t\t--\n");
 	if (*a)
-	{
 		ft_lstclear(a, free);
-		ft_printf("cleared: a\n");
-	}
 	if (*b)
-	{
 		ft_lstclear(b, free);
-		ft_printf("cleared: b\n");
-	}
 }
 
 void	print_stack(t_list **stack)
