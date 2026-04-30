@@ -6,12 +6,14 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:38:51 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 11:04:59 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/04/30 09:42:06 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+# define INT_MIN -2147483648
+# define INT_MAX 2147483647
 
 # include <stdlib.h>
 # include <unistd.h>
