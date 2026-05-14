@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:38:51 by vmistry           #+#    #+#             */
-/*   Updated: 2026/04/30 09:42:06 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/05/07 20:37:45 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int		find_min(t_list *stack);
 int		find_max(t_list *stack);
 int		get_target_pos(t_list *stack, int value);
 void	rotate_to_position(t_list **stack, int pos);
-
 
 // operations
 void	sa(t_list **a);

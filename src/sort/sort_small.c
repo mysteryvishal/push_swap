@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:20:53 by vmistry           #+#    #+#             */
-/*   Updated: 2026/04/30 11:13:42 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/05/07 20:39:32 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int	sort_5(t_list **a, t_list **b)
 	{
 		min_val = find_min(*a);
 		min_idx = find_position(*a, min_val);
-
 		if (min_idx <= ft_lstsize(*a))
 			while (find_position(*a, min_val) != 0)
 				ra(a);

@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 18:33:27 by vmistry           #+#    #+#             */
-/*   Updated: 2026/03/06 11:38:49 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/05/07 20:39:53 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,4 @@ void	rotate_to_position(t_list **stack, int pos)
 	else
 		while (pos++ < size)
 			rra(stack);
-	
 }
