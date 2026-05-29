@@ -12,24 +12,6 @@
 
 #include "get_next_line_bonus.h"
 
-static void	*ft_memmove(void *dst, const void *src, size_t len)
-{
-	const unsigned char	*s;
-	unsigned char		*d;
-
-	if (!dst && !src)
-		return (NULL);
-	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
-	if (d > s)
-		while (len-- > 0)
-			d[len] = s[len];
-	else
-		while (len--)
-			*d++ = *s++;
-	return (dst);
-}
-
 static char	*extract_line(char *buffer, char *line)
 {
 	char	*nl;
