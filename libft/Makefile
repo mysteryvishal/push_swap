@@ -60,7 +60,9 @@ SRCS := ft_isalpha.c \
 	ft_printf.c \
 	ft_putcs.c \
 	ft_puthp.c \
-	ft_putidu.c
+	ft_putidu.c \
+	get_next_line_bonus.c \
+	get_next_line.c
 
 OBJS = $(SRCS:.c=.o)
 
