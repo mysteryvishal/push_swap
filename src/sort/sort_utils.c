@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 18:33:27 by vmistry           #+#    #+#             */
-/*   Updated: 2026/05/27 10:08:03 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/05/27 12:39:00 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,21 +63,6 @@ int	find_position(t_list *stack, int value)
 		current = current->next;
 	}
 	return (-1);
-}
-
-int	get_target_pos(t_list *stack, int value)
-{
-	int	pos;
-
-	pos = 0;
-	while (stack)
-	{
-		if (*(int *)stack->content >= value)
-			return (pos);
-		stack = stack->next;
-		pos++;
-	}
-	return (pos);
 }
 
 void	rotate_to_position(t_list **stack, int pos)

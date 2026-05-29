@@ -26,6 +26,7 @@ SRCS = src/main.c \
        src/sort/sort.c \
        src/sort/sort_small.c \
        src/sort/sort_large.c \
+       src/sort/sort_large_utils.c \
        src/sort/sort_utils.c \
        src/utils.c
 

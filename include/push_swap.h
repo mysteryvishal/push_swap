@@ -32,8 +32,13 @@ int		is_sorted(t_list **stack);
 int		find_position(t_list *stack, int value);
 int		find_min(t_list *stack);
 int		find_max(t_list *stack);
-int		get_target_pos(t_list *stack, int value);
 void	rotate_to_position(t_list **stack, int pos);
+
+// sort large utils
+int		get_steps(int size, int pos);
+int		move_cost(int steps_a, int steps_b);
+int		get_target_pos(t_list *stack, int value);
+void	finish_rotations(t_list **a, t_list **b, int steps_a, int steps_b);
 
 // operations
 void	sa(t_list **a);
