@@ -32,23 +32,33 @@ SRCS = src/main.c \
 
 OBJS = $(SRCS:.c=.o)
 
+BONUS_NAME  = checker
+BONUS_SRCS  = bonus/checker_bonus.c \
+              bonus/swap_bonus.c \
+              bonus/push_bonus.c \
+              bonus/rotate_bonus.c \
+              bonus/rev_rotate_bonus.c \
+              src/parsing.c \
+              src/utils.c
+BONUS_OBJS  = $(BONUS_SRCS:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) -o $@ $^ -L$(LIBFT_DIR) -lft
 
 $(LIBFT): $(LIBFT_DIR)
-	make all -C $<
-	make bonus -C $<
+bonus: $(LIBFT) $(BONUS_OBJS)
+	$(CC) $(CFLAGS) -o $(BONUS_NAME) $(BONUS_OBJS) -L$(LIBFT_DIR) -lft
 
 clean:
 	make clean -C $(LIBFT_DIR)
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	make fclean -C $(LIBFT_DIR)
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(BONUS_NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

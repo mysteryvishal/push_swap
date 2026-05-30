@@ -1,33 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.h                                    :+:      :+:    :+:   */
+/*   rotate_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/29 00:00:00 by vmistry           #+#    #+#             */
-/*   Updated: 2026/05/30 11:16:04 by vmistry          ###   ########.fr       */
+/*   Created: 2026/05/30 10:36:36 by vmistry           #+#    #+#             */
+/*   Updated: 2026/05/30 11:15:57 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_BONUS_H
-# define CHECKER_BONUS_H
+#include "checker_bonus.h"
 
-# include "push_swap.h"
+// Silent versions of the push_swap operations
 
-void	sa(t_list **a);
-void	sb(t_list **b);
-void	ss(t_list **a, t_list **b);
+static void	rotate(t_list **lst)
+{
+	t_list	*node;
 
-void	pa(t_list **a, t_list **b);
-void	pb(t_list **a, t_list **b);
+	if (!(*lst) || !(*lst)->next)
+		return ;
+	node = (*lst);
+	(*lst) = (*lst)->next;
+	node->next = NULL;
+	ft_lstadd_back(lst, node);
+}
 
-void	ra(t_list **a);
-void	rb(t_list **b);
-void	rr(t_list **a, t_list **b);
+void	ra(t_list **a)
+{
+	rotate(a);
+}
 
-void	rra(t_list **a);
-void	rrb(t_list **b);
-void	rrr(t_list **a, t_list **b);
+void	rb(t_list **b)
+{
+	rotate(b);
+}
 
-#endif
+void	rr(t_list **a, t_list **b)
+{
+	rotate(a);
+	rotate(b);
+}

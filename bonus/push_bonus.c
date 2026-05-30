@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.h                                    :+:      :+:    :+:   */
+/*   push_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/29 00:00:00 by vmistry           #+#    #+#             */
-/*   Updated: 2026/05/30 11:16:04 by vmistry          ###   ########.fr       */
+/*   Created: 2026/05/30 10:35:09 by vmistry           #+#    #+#             */
+/*   Updated: 2026/05/30 11:16:02 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_BONUS_H
-# define CHECKER_BONUS_H
+#include "checker_bonus.h"
 
-# include "push_swap.h"
+// Silent versions of the push_swap operations
 
-void	sa(t_list **a);
-void	sb(t_list **b);
-void	ss(t_list **a, t_list **b);
+void	pa(t_list **a, t_list **b)
+{
+	t_list	*next_b;
 
-void	pa(t_list **a, t_list **b);
-void	pb(t_list **a, t_list **b);
+	if (!(*b))
+		return ;
+	next_b = (*b)->next;
+	ft_lstadd_front(a, *b);
+	(*b) = next_b;
+}
 
-void	ra(t_list **a);
-void	rb(t_list **b);
-void	rr(t_list **a, t_list **b);
+void	pb(t_list **a, t_list **b)
+{
+	t_list	*next_a;
 
-void	rra(t_list **a);
-void	rrb(t_list **b);
-void	rrr(t_list **a, t_list **b);
-
-#endif
+	if (!(*a))
+		return ;
+	next_a = (*a)->next;
+	ft_lstadd_front(b, *a);
+	(*a) = next_a;
+}
