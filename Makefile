@@ -6,7 +6,7 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/20 22:40:57 by vmistry           #+#    #+#              #
-#    Updated: 2026/03/06 08:45:36 by vmistry          ###   ########.fr        #
+#    Updated: 2026/05/30 11:39:42 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,15 +48,18 @@ $(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) -o $@ $^ -L$(LIBFT_DIR) -lft
 
 $(LIBFT): $(LIBFT_DIR)
+	$(MAKE) all -C $<
+	$(MAKE) bonus -C $<
+
 bonus: $(LIBFT) $(BONUS_OBJS)
 	$(CC) $(CFLAGS) -o $(BONUS_NAME) $(BONUS_OBJS) -L$(LIBFT_DIR) -lft
 
 clean:
-	make clean -C $(LIBFT_DIR)
+	$(MAKE) clean -C $(LIBFT_DIR)
 	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	make fclean -C $(LIBFT_DIR)
+	$(MAKE) fclean -C $(LIBFT_DIR)
 	$(RM) $(NAME) $(BONUS_NAME)
 
 re: fclean all
