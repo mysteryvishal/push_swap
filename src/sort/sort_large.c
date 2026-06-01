@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 17:25:23 by vmistry           #+#    #+#             */
-/*   Updated: 2026/05/29 15:34:56 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/06/01 11:05:14 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ static void	best_move(t_list **a, t_list **b, int *pos_a, int *pos_b)
 	}
 }
 
-// Performs the best move found by best_move: simultaneous rotations + final push
+// Performs best move determined by best_move: 
+// simultaneous rotations + insertion
 static void	do_move(t_list **a, t_list **b, int pos_a, int pos_b)
 {
 	while (pos_a > 0 && pos_b > 0)
