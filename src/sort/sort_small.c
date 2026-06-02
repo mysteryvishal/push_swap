@@ -6,13 +6,12 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:20:53 by vmistry           #+#    #+#             */
-/*   Updated: 2026/05/27 12:29:58 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/06/02 23:46:34 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// TODO verify protections for sort_3
 int	sort_3(t_list **lst)
 {
 	int	*one;
@@ -40,22 +39,14 @@ int	sort_3(t_list **lst)
 	return (0);
 }
 
-// TODO verify protection for sort_5
 int	sort_5(t_list **a, t_list **b)
 {
 	int	min_val;
-	int	min_idx;
 
 	while (ft_lstsize(*a) > 3)
 	{
 		min_val = find_min(*a);
-		min_idx = find_position(*a, min_val);
-		if (min_idx <= ft_lstsize(*a))
-			while (find_position(*a, min_val) != 0)
-				ra(a);
-		else
-			while (find_position(*a, min_val) != 0)
-				rra(a);
+		rotate_to_position(a, find_position(*a, min_val));
 		pb(a, b);
 	}
 	sort_3(a);
