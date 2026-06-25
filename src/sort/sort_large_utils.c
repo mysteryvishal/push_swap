@@ -6,13 +6,18 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 12:00:00 by vmistry           #+#    #+#             */
-/*   Updated: 2026/05/29 15:17:48 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/06/25 14:05:53 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// Returns signed steps to rotate pos to top: positive = ra, negative = rra
+/* get_steps:
+
+Returns signed steps to rotate pos to top: 
+- positive = ra
+- negative = rra
+*/
 int	get_steps(int size, int pos)
 {
 	if (pos <= size / 2)
@@ -20,8 +25,15 @@ int	get_steps(int size, int pos)
 	return (-(size - pos));
 }
 
-// Same direction (both pos/neg): simultaneous rr/rrr → cost = max(|a|,|b|)
-// Opposite direction: separate rotations → cost = |a| + |b|
+/* move_cost:
+Calculates move cost value from B -> A based on steps to rotate each stack
+
+Same direction (both pos/neg): 
+- simultaneous rr/rrr → cost = max(|a|,|b|)
+
+Opposite direction:
+- separate rotations → cost = |a| + |b|
+*/
 int	move_cost(int steps_a, int steps_b)
 {
 	int	abs_a;
@@ -44,7 +56,10 @@ int	move_cost(int steps_a, int steps_b)
 	return (abs_a + abs_b);
 }
 
-// Handles single stack rotations after simultaneous rr/rrr
+/* finish_rotations:
+
+Handles remaining rotations for stacks A and B after simultaneous rotations.
+*/
 void	finish_rotations(t_list **a, t_list **b, int steps_a, int steps_b)
 {
 	while (steps_a > 0)
@@ -69,9 +84,18 @@ void	finish_rotations(t_list **a, t_list **b, int steps_a, int steps_b)
 	}
 }
 
-// Finds target position in A for given B value
-// Checking pairs of elements by circularly iterating through A
-// 	(if value fits between prev and current, return current position)
+/* get_target_pos:
+
+Finds target position in A for given B value
+Checking pairs of elements by circularly iterating through A
+
+CONDITIONS:
+pv < cv && pv < value && value <= cv
+	value fits in normal ascending gap
+pv > cv && (value > pv || value <= cv)
+	wrap-around pair (max->min), 
+	value goes either above current max or at/below current min
+*/
 int	get_target_pos(t_list *stack, int value)
 {
 	t_list	*current;

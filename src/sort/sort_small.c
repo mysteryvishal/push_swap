@@ -6,12 +6,22 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:20:53 by vmistry           #+#    #+#             */
-/*   Updated: 2026/06/02 23:46:34 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/06/25 14:05:03 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/* sort_3:
+
+Sorts a stack of 3 elements in ascending order using minimal operations.
+Logic:
+- If the first element is greater than the third, rotate up (ra).
+- Else if the first element is greater than the second, swap (sa).
+- Else if the second element is greater than the third, swap and rotate (sa + ra).
+
+Ensures the 3 elements are sorted in at most 2 operations.
+*/
 void	sort_3(t_list **lst)
 {
 	int	*one;
@@ -38,6 +48,13 @@ void	sort_3(t_list **lst)
 	}
 }
 
+/* sort_5:
+
+Sorts a stack of 5 elements using the following strategy:
+1. Push the two smallest elements to stack B (using pb).
+2. Sort the remaining 3 elements in stack A using sort_3.
+3. Push the two elements back from stack B to stack A (using pa).
+*/
 void	sort_5(t_list **a, t_list **b)
 {
 	int	min_val;

@@ -6,12 +6,18 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 10:36:22 by vmistry           #+#    #+#             */
-/*   Updated: 2026/04/30 11:15:08 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/06/25 14:04:05 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/* error_exit:
+
+Called on any parsing or sorting error. Printing "Error\n" to stderr.
+- Frees any allocated stacks to prevent memory leaks.
+- Exits the program with a non-zero status to indicate failure.
+*/
 void	error_exit(t_list **a, t_list **b)
 {
 	if (*a || *b)
@@ -20,6 +26,11 @@ void	error_exit(t_list **a, t_list **b)
 	exit(1);
 }
 
+/* clear_stacks:
+
+Frees all memory allocated for stacks A and B.
+- Uses ft_lstclear to free each node's content and the nodes themselves.
+*/
 void	clear_stacks(t_list **a, t_list **b)
 {
 	if (*a)

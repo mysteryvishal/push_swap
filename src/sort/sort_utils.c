@@ -6,12 +6,16 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 18:33:27 by vmistry           #+#    #+#             */
-/*   Updated: 2026/05/27 12:39:00 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/06/15 14:28:45 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/* find_min:
+
+Finds the minimum value in the stack.
+*/
 int	find_min(t_list *stack)
 {
 	int		min;
@@ -30,6 +34,10 @@ int	find_min(t_list *stack)
 	return (min);
 }
 
+/* find_max:
+
+Finds the maximum value in the stack.
+*/
 int	find_max(t_list *stack)
 {
 	int		max;
@@ -48,6 +56,11 @@ int	find_max(t_list *stack)
 	return (max);
 }
 
+/* find_position:
+
+Finds the index of the specified value in the stack.
+Returns the index if found, or -1 if not found.
+*/
 int	find_position(t_list *stack, int value)
 {
 	t_list	*current;
@@ -65,6 +78,13 @@ int	find_position(t_list *stack, int value)
 	return (-1);
 }
 
+/* rotate_to_position:
+
+Rotates the stack to bring the specified element position to the top.
+
+- if position in first half of stack -> rotate up (ra)
+- if position in second half of stack -> rotate down (rra)
+*/
 void	rotate_to_position(t_list **stack, int pos)
 {
 	int	size;

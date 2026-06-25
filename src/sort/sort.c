@@ -6,20 +6,21 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:03:57 by vmistry           #+#    #+#             */
-/*   Updated: 2026/04/30 11:06:31 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/06/25 14:04:47 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// dispatch function based on size `n` of stack
-// – n <= 5 ––> Quicksort
-// – n > 5  ––> Radix sort
+/* sort:
 
-// TODO: if n isn't used for any calculations besides determining
-// which sorting algorithm to use, then don't bother counting it all.
-// Just aim to see if it's <= 5 or not.
+Dispatch function based on stack size `n`
 
+Logic:
+	n <= 3 –> hardcoded decision tree
+	n <= 5 –> push 2 smallest to B, sort 3, push back
+	n >  5 –> greedy cost-based insertion
+*/
 int	sort(t_list **a, t_list **b)
 {
 	int	n;

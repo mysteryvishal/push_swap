@@ -6,12 +6,19 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:27:14 by vmistry           #+#    #+#             */
-/*   Updated: 2026/04/30 11:02:06 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/06/15 14:35:49 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/* is_valid_int:
+
+Checks if given string is a valid integer within INT_MIN and INT_MAX.
+- Handles optional leading '+' or '-' sign.
+- Ensures the string contains only digits after the optional sign.
+- Returns 1 if valid, otherwise returns 0.
+*/
 static int	is_valid_int(const char *s)
 {
 	long	n;
@@ -38,6 +45,11 @@ static int	is_valid_int(const char *s)
 	return (1);
 }
 
+/* has_duplicate:
+
+Checks if the given value already exists in the stack.
+- Returns 1 if a duplicate is found, otherwise returns 0.
+*/
 static int	has_duplicate(t_list *stack, int value)
 {
 	while (stack)
@@ -49,6 +61,12 @@ static int	has_duplicate(t_list *stack, int value)
 	return (0);
 }
 
+/* parse_cleanup:
+
+Frees all allocated memory for the stack and split numbers.
+- If `split` is true, also frees the array of split strings.
+- Returns NULL for convenient error handling in the caller.
+*/
 static t_list	*parse_cleanup(t_list **stack, char **numbers, int split)
 {
 	size_t	i;
@@ -74,6 +92,13 @@ static t_list	*parse_cleanup(t_list **stack, char **numbers, int split)
 	return (NULL);
 }
 
+/* build_stack:
+
+Builds a linked list stack from an array of string numbers.
+- Validates each string as a proper integer.
+- Checks for duplicates in the stack.
+- On any error, frees all allocated memory and returns NULL.
+*/
 static t_list	*build_stack(char **numbers, int split)
 {
 	t_list	*stack;
@@ -102,6 +127,13 @@ static t_list	*build_stack(char **numbers, int split)
 	return (parse_cleanup(NULL, numbers, split), stack);
 }
 
+/* parse_args:
+
+Parses command-line arguments into a linked list stack.
+
+- If argc == 2, splits the single string argument by spaces.
+- Otherwise, treats each argv[i] (i > 0) as a separate number.
+*/
 t_list	*parse_args(int argc, char **argv)
 {
 	if (argc == 2)
