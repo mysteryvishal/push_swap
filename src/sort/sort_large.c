@@ -65,13 +65,7 @@ static void	do_move(t_list **a, t_list **b, int pos_a, int pos_b)
 	pa(a, b);
 }
 
-// Main sorting function for large stacks
-// 	1. Push all but 3 to B
-// 	2. Sort remaining 3 in A
-// 	3. For each element in B, calculate best move to push to A
-// 	4. Perform best move (simultaneous rotations + push)
-// 	5. Final rotation to put min at top
-int	sort_large(t_list **a, t_list **b)
+void	sort_large(t_list **a, t_list **b)
 {
 	int	pos_a;
 	int	pos_b;
@@ -85,5 +79,4 @@ int	sort_large(t_list **a, t_list **b)
 		do_move(a, b, pos_a, pos_b);
 	}
 	rotate_to_position(a, find_position(*a, find_min(*a)));
-	return (0);
 }

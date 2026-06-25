@@ -26,6 +26,10 @@ int	main(int argc, char *argv[])
 	if (!a)
 		error_exit(&a, &b);
 	if (sort(&a, &b))
-		return (clear_stacks(&a, &b), 1);
-	return (clear_stacks(&a, &b), 0);
+	{
+		clear_stacks(&a, &b);
+		return (1);
+	}
+	clear_stacks(&a, &b);
+	return (0);
 }

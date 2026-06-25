@@ -33,9 +33,10 @@ int	sort(t_list **a, t_list **b)
 		return (0);
 	}
 	else if (n <= 3)
-		return (sort_3(a));
+		sort_3(a);
 	else if (n <= 5)
-		return (sort_5(a, b));
+		sort_5(a, b);
 	else
-		return (sort_large(a, b));
+		sort_large(a, b);
+	return (!is_sorted(a));
 }

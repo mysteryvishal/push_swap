@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int	sort_3(t_list **lst)
+void	sort_3(t_list **lst)
 {
 	int	*one;
 	int	*two;
@@ -36,10 +36,9 @@ int	sort_3(t_list **lst)
 			ra(lst);
 		}
 	}
-	return (0);
 }
 
-int	sort_5(t_list **a, t_list **b)
+void	sort_5(t_list **a, t_list **b)
 {
 	int	min_val;
 
@@ -52,5 +51,4 @@ int	sort_5(t_list **a, t_list **b)
 	sort_3(a);
 	while (*b)
 		pa(a, b);
-	return (0);
 }

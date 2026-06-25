@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 22:38:51 by vmistry           #+#    #+#             */
-/*   Updated: 2026/05/07 20:37:45 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/06/25 14:03:53 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 
 // general utils
 void	error_exit(t_list **a, t_list **b);
-void	print_stack(t_list **stack);
 void	clear_stacks(t_list **a, t_list **b);
 
 // parsing
@@ -55,7 +54,7 @@ void	rrr(t_list **a, t_list **b);
 
 // sorting
 int		sort(t_list **a, t_list **b);
-int		sort_3(t_list **a);
-int		sort_5(t_list **a, t_list **b);
-int		sort_large(t_list **a, t_list **b);
+void	sort_3(t_list **a);
+void	sort_5(t_list **a, t_list **b);
+void	sort_large(t_list **a, t_list **b);
 #endif

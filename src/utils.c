@@ -28,22 +28,10 @@ void	clear_stacks(t_list **a, t_list **b)
 		ft_lstclear(b, free);
 }
 
-void	print_stack(t_list **stack)
-{
-	t_list	*current;
-
-	current = *stack;
-	ft_printf("Stack: ");
-	while (current)
-	{
-		ft_printf("%d", *(int *)current->content);
-		if (current->next)
-			ft_printf(" -> ");
-		current = current->next;
-	}
-	ft_printf("\n");
-}
-
+/* is_sorted:
+Checks if the stack is sorted in ascending order.
+- Returns 1 if sorted, 0 if not, -1 on error.
+*/
 int	is_sorted(t_list **stack)
 {
 	t_list	*current;
