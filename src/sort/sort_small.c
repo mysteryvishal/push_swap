@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 08:20:53 by vmistry           #+#    #+#             */
-/*   Updated: 2026/06/25 14:05:03 by vmistry          ###   ########.fr       */
+/*   Updated: 2026/07/03 15:15:16 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ Sorts a stack of 3 elements in ascending order using minimal operations.
 Logic:
 - If the first element is greater than the third, rotate up (ra).
 - Else if the first element is greater than the second, swap (sa).
-- Else if the second element is greater than the third, swap and rotate (sa + ra).
+- Else if the second element is greater than the third, swap and 
+rotate (sa + ra).
 
 Ensures the 3 elements are sorted in at most 2 operations.
 */
